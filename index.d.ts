@@ -31,7 +31,7 @@ declare namespace updateNotifier {
      * Convenience method to display a notification message.
      * Only notifies if there is an update and the process is TTY.
      */
-    notify (options: NotifyOptions): void;
+    notify (options?: NotifyOptions): void;
     update: UpdateInfo;
   }
 
