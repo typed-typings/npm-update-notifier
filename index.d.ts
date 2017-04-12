@@ -24,6 +24,21 @@ declare namespace updateNotifier {
      * Defer showing the notification to after the process has exited.
      */
     defer?: boolean;
+    /**
+    * Message that will be shown when an update is available.
+    */
+    message?: string;
+    /**
+    * Include the -g argument in the default message's npm i recommendation. 
+    * You may want to change this if your CLI package can be installed as a 
+    * dependency of another project, and don't want to recommend a global installation. 
+    * This option is ignored if you supply your own message (see above).
+    */
+    isGlobal?: boolean;
+    /**
+    * Options object that will be passed to boxen. (https://github.com/sindresorhus/boxen)
+    */
+    boxenOpts?: {padding?: number, margin?: number, align?: string, borderColor?: string, borderStyle?: string};
   }
 
   interface Result {
